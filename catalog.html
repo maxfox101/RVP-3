@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Каталог — БазМет</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav>
+<ul>
+<li><a href="index.html">Главная</a></li>
+<li><a href="catalog.html" aria-current="page">Каталог</a></li>
+<li><a href="services.html">Услуги</a></li>
+<li><a href="about.html">О компании</a></li>
+<li><a href="contacts.html">Контакты</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<h1>Каталог продукции</h1>
+
+<form action="catalog-search.html" method="get" role="search">
+<label for="q">Поиск по каталогу</label>
+<input type="search" id="q" name="q" list="nomenclature" placeholder="Например: ОСТ 1 33055-80">
+<datalist id="nomenclature">
+<option value="Гайка ГОСТ 5915-70">
+<option value="Гайка ОСТ 1 33055-80">
+<option value="Гайки 3350А (Нормаль авиационная)">
+<option value="Болт ГОСТ 7798-70">
+<option value="Болт ОСТ 1 31115-80">
+<option value="Болт нормаль 3082А">
+<option value="Винт ГОСТ 1491-80">
+<option value="Винт ОСТ 1 31528-80">
+<option value="Винты 3157А (Нормаль)">
+<option value="Заклёпка ГОСТ 10299-80">
+<option value="Заклёпка ОСТ 1 34040-79">
+<option value="Заклёпки 6043А (Нормаль авиационная)">
+<option value="Шайба гровер (пружинная) ГОСТ 6402-70">
+<option value="Шайба ОСТ 1 11532-74">
+<option value="Шайба ГОСТ 13439-68">
+</datalist>
+<button type="submit">Найти</button>
+</form>
+
+<section>
+<h2>Категории</h2>
+<div class="grid catalog-categories">
+<article class="card">
+<h3><a href="nuts.html">Гайки</a></h3>
+<img src="images/nuts.jpg" alt="Гайки">
+</article>
+<article class="card">
+<h3><a href="bolts.html">Болты</a></h3>
+<img src="images/bolts.jpg" alt="Болты">
+</article>
+<article class="card">
+<h3><a href="screws.html">Винты</a></h3>
+<img src="images/screws.jpg" alt="Винты">
+</article>
+<article class="card">
+<h3><a href="rivets.html">Заклёпки</a></h3>
+<img src="images/rivets.jpg" alt="Заклёпки">
+</article>
+<article class="card">
+<h3><a href="washers.html">Шайбы</a></h3>
+<img src="images/washers.jpg" alt="Шайбы">
+</article>
+</div>
+</section>
+</main>
+
+<footer>
+<p>&copy; 2026 ООО «БазМет»</p>
+</footer>
+</body>
+</html>

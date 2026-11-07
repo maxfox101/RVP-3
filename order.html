@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>Оставить заявку — БазМет</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<nav>
+<ul>
+<li><a href="index.html">Главная</a></li>
+<li><a href="catalog.html">Каталог</a></li>
+<li><a href="services.html">Услуги</a></li>
+<li><a href="about.html">О компании</a></li>
+<li><a href="contacts.html">Контакты</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<h1>Оставить заявку</h1>
+
+<form action="order.html" method="post">
+<label for="service">Услуга</label>
+<input type="text" id="service" name="service" placeholder="Например: Лазерная гравировка">
+
+<label for="name">Ваше имя *</label>
+<input type="text" id="name" name="name" placeholder="Введите имя" required>
+
+<label for="phone">Номер телефона *</label>
+<input type="tel" id="phone" name="phone" placeholder="+7 (___) ___ - __ - __" required>
+
+<label for="email">E-mail *</label>
+<input type="email" id="email" name="email" placeholder="example@mail.ru" required>
+
+<label for="description">Описание / Спецификация заявки</label>
+<textarea id="description" name="description" rows="5" placeholder="Укажите количество, размеры и дополнительные требования"></textarea>
+
+<button type="submit">Отправить заявку</button>
+</form>
+</main>
+
+<footer>
+<p>&copy; 2026 ООО «БазМет»</p>
+</footer>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var service = params.get("service");
+  if (!service) return;
+  var field = document.getElementById("service");
+  if (field && !field.value) field.value = service;
+})();
+</script>
+</body>
+</html>
